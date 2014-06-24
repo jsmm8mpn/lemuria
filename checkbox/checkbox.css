@@ -42,3 +42,54 @@
   margin-left: 10px;
   vertical-align: top;
 }
+
+
+.setting-img {
+  width: 30px;
+  height: 30px;
+  background-repeat="no-repeat";
+  background-position="center";
+}
+
+.setting-b {
+  width: 130px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block;
+  border: .25rem solid;
+  border-radius: 1rem;
+  padding: 3px;
+  border-color: black;
+  opacity: 0.4;
+}
+
+.setting-b.true {
+  border-color: green;
+  opacity: 1;
+}
+
+.setting-b.false {
+  
+}
+
+.setting-c .setting-o {
+  font-size: 2em;
+  display: inline-block;
+  border: .25rem solid;
+  border-radius: 1rem;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin: 10px;
+  opacity: 0.4;
+}
+.setting-c .setting-o.true {
+  border-color: green;
+  opacity: 1;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}

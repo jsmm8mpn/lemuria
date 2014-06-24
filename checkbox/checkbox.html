@@ -1,7 +1,21 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="checkbox.js"></script>
 <link rel="stylesheet" type="text/css" href="checkbox.css">
 
-<div class="large-checkbox-field">
-    <input class="large-checkbox" id="large-checkbox" type="checkbox"/>
-    <label class="large-checkbox-label" for="large-checkbox"></label>
-    <label class="large-checkbox-text">Test</label>
+<div id="testField">
+
 </div>
+
+<div id="testField2">
+
+</div>
+
+<script type="text/javascript">
+  $(window).on('load', function () {
+    $('#testField').lCheckbox();
+    $('#testField2').lCheckbox2({
+      text: 'Blah',
+      img: 'https://raw.githubusercontent.com/jsmm8mpn/bamboozle/master/public/images/add_file.png'
+    });
+  });
+</script>
