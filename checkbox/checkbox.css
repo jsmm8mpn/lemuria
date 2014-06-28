@@ -45,20 +45,20 @@
 
 
 .setting-img {
-  width: 30px;
-  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   background-repeat="no-repeat";
   background-position="center";
 }
 
 .setting-b {
-  width: 130px;
+  //width: 130px;
   margin: 10px;
   text-align: center;
   display: inline-block;
   border: .25rem solid;
   border-radius: 1rem;
-  padding: 3px;
+  padding: 5px 10px;
   border-color: black;
   opacity: 0.4;
 }

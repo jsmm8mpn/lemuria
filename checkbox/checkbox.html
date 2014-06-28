@@ -1,21 +1,31 @@
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script type="text/javascript" src="checkbox.js"></script>
-<link rel="stylesheet" type="text/css" href="checkbox.css">
-
-<div id="testField">
-
-</div>
-
-<div id="testField2">
-
-</div>
-
-<script type="text/javascript">
-  $(window).on('load', function () {
-    $('#testField').lCheckbox();
-    $('#testField2').lCheckbox2({
-      text: 'Blah',
-      img: 'https://raw.githubusercontent.com/jsmm8mpn/bamboozle/master/public/images/add_file.png'
-    });
-  });
-</script>
+<html>
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script type="text/javascript" src="checkbox.js"></script>
+		<link rel="stylesheet" type="text/css" href="checkbox.css">
+	</head>
+	<body>
+		<h3>Checkboxes</h3>
+		
+		<div id="testField"></div>
+		<div id="testField2"></div>
+		<div id="testField3"></div>
+		<div id="testField4"></div>
+		
+		<script type="text/javascript">
+			$(window).on('load', function () {
+				$('#testField').lCheckbox();
+				$('#testField2').lCheckbox({
+					img: 'https://raw.githubusercontent.com/Templarian/WindowsIcons/master/WindowsPhone/light/appbar.heart.png'
+				});
+				$('#testField3').lCheckbox({
+					text: 'Include'
+				});
+				$('#testField4').lCheckbox({
+					text: 'Favorite',
+					img: 'https://raw.githubusercontent.com/Templarian/WindowsIcons/master/WindowsPhone/light/appbar.heart.png'
+				});
+			});
+		</script>
+	</body>
+</html>
