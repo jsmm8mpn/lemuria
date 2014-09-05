@@ -1,31 +1,75 @@
 <html>
 	<head>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script type="text/javascript" src="checkbox.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <script type="text/javascript" src="checkbox.js"></script>
 		<link rel="stylesheet" type="text/css" href="checkbox.css">
+    
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=default&lang=html&lang=js"></script>
+
+    
+<!--
+    <script type="application/javascript" src="../prism/prism.js"></script>
+    <link rel="stylesheet" type="text/css" href="../prism/prism.css">
+-->
+    
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	</head>
-	<body>
-		<h3>Checkboxes</h3>
-		
-		<div id="testField"></div>
-		<div id="testField2"></div>
-		<div id="testField3"></div>
-		<div id="testField4"></div>
-		
-		<script type="text/javascript">
-			$(window).on('load', function () {
-				$('#testField').lCheckbox();
-				$('#testField2').lCheckbox({
-					img: 'https://raw.githubusercontent.com/Templarian/WindowsIcons/master/WindowsPhone/light/appbar.heart.png'
-				});
-				$('#testField3').lCheckbox({
-					text: 'Include'
-				});
-				$('#testField4').lCheckbox({
-					text: 'Favorite',
-					img: 'https://raw.githubusercontent.com/Templarian/WindowsIcons/master/WindowsPhone/light/appbar.heart.png'
-				});
-			});
-		</script>
+	<body ng-app="l" ng-controller="MainController">
+		<a ng-click="angular = true">Angular</a>
+    <a ng-click="angular = false">JQuery</a>
+
+    <h2>Checkboxes</h2>
+    
+    <h3>Plain</h3>
+    <div class="bs-docs-example" ng-if="angular">
+      <input l-checkbox type="checkbox"/>
+      <pre class="prettyprint">&lt;input l-checkbox type="checkbox"/&gt;</pre>
+    </div>
+    <div class="bs-docs-example" ng-if="!angular">
+      <input id="plain" type="checkbox"/>
+      <pre class="prettyprint">&lt;input id="plain" type="checkbox"/&gt;</pre>
+      <pre class="prettyprint">$('#plain').lCheckbox();</pre>
+    </div>
+      
+<!--
+    <h3>Plain Auto</h3>
+    <div class="bs-docs-example">
+      <input id="exex" class="l-checkbox" type="checkbox"/>
+      <pre class="prettyprint">$('#myCheckbox').lCheckbox();</pre>
+    </div>
+-->
+    
+    <h3>With Icon</h3>
+    <div class="bs-docs-example" ng-if="angular">
+      <input type="checkbox" l-checkbox img="favoriteIcon"/>
+      <pre class="prettyprint">&lt;input type="checkbox" l-checkbox img="favoriteIcon"/&gt;</pre>
+    </div>
+    <div class="bs-docs-example" ng-if="!angular">
+      <input id="icon" type="checkbox"/>
+      <pre class="prettyprint">&lt;input id="icon" type="checkbox"/&gt;</pre>
+      <pre class="prettyprint">$('#icon').lCheckbox({
+  img: 'images/heart.png'
+});</pre>
+    </div>
+    
+    
+    <h3>With Text</h3>
+    <div class="bs-docs-example" ng-if="angular">
+      <input type="checkbox" l-checkbox img="favoriteIcon" text="favoriteText"/>
+      <pre class="prettyprint">$('#testField').lCheckbox({
+  img: 'images/heart.html',
+  text: 'Favorite'
+});</pre>
+    </div>
+    <div class="bs-docs-example" ng-if="!angular">
+      <input type="checkbox" id="text"/>
+      <pre class="prettyprint">$('#testField').lCheckbox({
+  img: 'images/heart.png',
+  text: 'Favorite'
+});</pre>
+    </div>
+  
 	</body>
 </html>
