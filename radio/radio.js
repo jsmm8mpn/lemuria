@@ -1,4 +1,4 @@
-var l = angular.module('checkboxEx', ['l']);
+var l = angular.module('radioEx', ['l']);
 l.controller('MainController', ['$scope', '$timeout', function($scope, $timeout) {
   $scope.angular = true;
   $scope.favoriteIcon = 'heart.gif';
