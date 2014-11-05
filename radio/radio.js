@@ -1,21 +1,15 @@
 var l = angular.module('radioEx', ['l']);
 l.controller('MainController', ['$scope', '$timeout', function($scope, $timeout) {
-  $scope.angular = true;
-  $scope.favoriteIcon = 'heart.gif';
-  $scope.favoriteText = 'Favorite';
-  
-  $scope.$watch('angular', function() {
-    if (!$scope.angular) {
-      $timeout(function() {
-        $('#plain').lCheckbox();
-        $('#icon').lCheckbox({
-          img: 'heart.gif'
-        });
-        $('#text').lCheckbox({
-          img: 'heart.gif',
-          text: 'Favorite'
-        });
-      });
-    }
-  });
+	$scope.numbers = ['1', '2', '3'];
+	$scope.devices = ['Desktop', 'Laptop', 'Tablet'];
+	$scope.food = [{
+		text: 'Apple',
+		img: '../icons/food/apple13.png'
+	},{
+		text: 'Carrot',
+		img: '../icons/food/carrot3.png'
+	},{
+		text: 'Grapes',
+		img: '../icons/food/grapes1.png'
+	}];
 }]);

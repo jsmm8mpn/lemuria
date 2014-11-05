@@ -56,7 +56,7 @@ l.directive('lRadio', function() {
       var checkbox = element;
       html.click(function() {
         //$(this).toggleClass('true');
-        checkbox.prop('checked', !checkbox.prop('checked'));
+        checkbox.prop('checked', true);
       });
 
       html.insertAfter(element);

@@ -2,6 +2,8 @@
 	<head>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
     <script type="text/javascript" src="checkbox.js"></script>
     <script type="text/javascript" src="../l.angular.js"></script>
     <script type="text/javascript" src="../l.jquery.js"></script>
@@ -17,58 +19,27 @@
     
   </head>
 	<body ng-app="checkboxEx" ng-controller="MainController">
-		<a ng-click="angular = true">Angular</a>
-    <a ng-click="angular = false">JQuery</a>
 
     <h2>Checkboxes</h2>
     
     <h3>Plain</h3>
-    <div class="bs-docs-example" ng-if="angular">
+    <div class="bs-docs-example">
       <input l-checkbox type="checkbox"/>
       <pre class="prettyprint">&lt;input l-checkbox type="checkbox"/&gt;</pre>
     </div>
-    <div class="bs-docs-example" ng-if="!angular">
-      <input id="plain" type="checkbox"/>
-      <pre class="prettyprint">&lt;input id="plain" type="checkbox"/&gt;</pre>
-      <pre class="prettyprint">$('#plain').lCheckbox();</pre>
-    </div>
       
-<!--
-    <h3>Plain Auto</h3>
-    <div class="bs-docs-example">
-      <input id="exex" class="l-checkbox" type="checkbox"/>
-      <pre class="prettyprint">$('#myCheckbox').lCheckbox();</pre>
-    </div>
--->
     
     <h3>With Icon</h3>
-    <div class="bs-docs-example" ng-if="angular">
+    <div class="bs-docs-example">
       <input type="checkbox" l-checkbox img="favoriteIcon"/>
       <pre class="prettyprint">&lt;input type="checkbox" l-checkbox img="favoriteIcon"/&gt;</pre>
-    </div>
-    <div class="bs-docs-example" ng-if="!angular">
-      <input id="icon" type="checkbox"/>
-      <pre class="prettyprint">&lt;input id="icon" type="checkbox"/&gt;</pre>
-      <pre class="prettyprint">$('#icon').lCheckbox({
-  img: 'images/heart.png'
-});</pre>
     </div>
     
     
     <h3>With Text</h3>
-    <div class="bs-docs-example" ng-if="angular">
+    <div class="bs-docs-example">
       <input type="checkbox" l-checkbox img="favoriteIcon" text="favoriteText"/>
-      <pre class="prettyprint">$('#testField').lCheckbox({
-  img: 'images/heart.html',
-  text: 'Favorite'
-});</pre>
-    </div>
-    <div class="bs-docs-example" ng-if="!angular">
-      <input type="checkbox" id="text"/>
-      <pre class="prettyprint">$('#testField').lCheckbox({
-  img: 'images/heart.png',
-  text: 'Favorite'
-});</pre>
+      <pre class="prettyprint">&lt;input type="checkbox" l-checkbox img="favoriteIcon" text="favoriteText"/&gt;</pre>
     </div>
   
 	</body>

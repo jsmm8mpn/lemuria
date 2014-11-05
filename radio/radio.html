@@ -2,50 +2,40 @@
 	<head>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
-    <script type="text/javascript" src="radio.js"></script>
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		
+		<script type="text/javascript" src="radio.js"></script>
     <script type="text/javascript" src="../l.angular.js"></script>
     <script type="text/javascript" src="../l.jquery.js"></script>
 		<link rel="stylesheet" type="text/css" href="../l.css">
     
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=default&lang=html&lang=js"></script>
-
-    
-<!--
-    <script type="application/javascript" src="../prism/prism.js"></script>
-    <link rel="stylesheet" type="text/css" href="../prism/prism.css">
--->
     
   </head>
 	<body ng-app="radioEx" ng-controller="MainController">
-		<a ng-click="angular = true">Angular</a>
-    <a ng-click="angular = false">JQuery</a>
 
     <h2>Radio</h2>
     
-    <h3>Text Only</h3>
-    <div class="bs-docs-example" ng-if="angular">
+    <h3>Numbers</h3>
+    <div class="bs-docs-example">
       <div>How Many?</div>
-      <input l-radio name="plain" text="'1'" type="radio"/>
-      <input l-radio name="plain" text="'2'" type="radio"/>
-      <input l-radio name="plain" text="'3'" type="radio"/>
-      <pre class="prettyprint">&lt;input l-checkbox type="checkbox"/&gt;</pre>
+      <input ng-repeat="num in numbers" l-radio name="numberRadio" text="num" type="radio"/>
+      <pre class="prettyprint">&lt;input ng-repeat="num in numbers" l-radio name="numberRadio" text="num" type="radio"/&gt;</pre>
     </div>
     
-    <div class="bs-docs-example" ng-if="angular">
+		<h3>Text</h3>
+    <div class="bs-docs-example">
       <div>What Device?</div>
-      <input l-radio name="plain" text="'Desktop'" type="radio"/>
-      <input l-radio name="plain" text="'Laptop'" type="radio"/>
-      <input l-radio name="plain" text="'Tablet'" type="radio"/>
-      <pre class="prettyprint">&lt;input l-checkbox type="checkbox"/&gt;</pre>
+      <input ng-repeat="device in devices" l-radio name="textRadio" text="device" type="radio"/>
+      <pre class="prettyprint">&lt;input ng-repeat="device in devices" l-radio name="textRadio" text="device" type="radio"/&gt;</pre>
     </div>
     
     <h3>With Images</h3>
-    <div class="bs-docs-example" ng-if="angular">
+    <div class="bs-docs-example">
       <div>What's for lunch?</div>
-      <input l-radio name="plain" text="'Apple'" img="'../icons/food/apple13.png'" type="radio"/>
-      <input l-radio name="plain" text="'Carrot'" img="'../icons/food/carrot3.png'" type="radio"/>
-      <input l-radio name="plain" text="'Grapes'" img="'../icons/food/grapes1.png'" type="radio"/>
-      <pre class="prettyprint">&lt;input l-checkbox type="checkbox"/&gt;</pre>
+      <input ng-repeat="item in food" l-radio name="foodRadio" value="item.value" ng-model="lunch" text="item.text" img="item.img" type="radio"/>
+      <pre class="prettyprint">&lt;input ng-repeat="item in food" l-radio name="foodRadio" value="item.value" ng-model="lunch" text="item.text" img="item.img" type="radio"/&gt;</pre>
     </div>
   
 	</body>

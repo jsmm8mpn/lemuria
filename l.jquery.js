@@ -22,4 +22,27 @@
     html.insertAfter(this);
     this.hide();
   };
+	
+	$.fn.lRadio = function(options) {
+    if (!options)
+      options = {};
+    var html = $('<div class="l-radio"></div>');
+
+		if (options.img) {
+    	html.append('<div class="setting-img centered"><img src="' + options.img + '"/></div>');
+		}
+		
+    if (options.text) {
+      html.append('<div class="setting-text">' + options.text + '</div>');
+    }
+
+    var checkbox = this;
+    html.click(function() {
+      $(this).toggleClass('true');
+      checkbox.prop('checked', !checkbox.prop('checked'));
+    });
+
+    html.insertAfter(this);
+    this.hide();
+  };
 }(window.jQuery);
