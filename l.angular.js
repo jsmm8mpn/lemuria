@@ -64,3 +64,27 @@ l.directive('lRadio', function() {
     }
   };
 });
+
+l.directive('lSlider', function() {
+	return {
+    restrict: 'A',
+    scope: {
+      //values: '='
+    },
+    link: function(scope, element) {
+//      var html = $('<div class="l-slider"></div>');
+//
+//      var input = element;
+////      html.click(function() {
+////        //$(this).toggleClass('true');
+////        checkbox.prop('checked', true);
+////      });
+//			html.slider();
+//      html.insertAfter(element);
+//			$('<div class="l-arrow-left"/>').insertBefore(html);
+//			$('<div class="l-arrow-right"/>').insertAfter(html);
+//
+//      element.hide();
+    }
+  };
+});

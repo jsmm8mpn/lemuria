@@ -61,6 +61,47 @@ input[type="radio"]:checked + .l-radio {
   font-size: 1em;
 }
 
+input[type="range"] {
+  -webkit-appearance: none !important;
+  height: 15px;
+	border-radius: 5px;
+  background-color: grey;
+  margin: auto;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	width: 40px;
+	height: 40px;
+	background-color: green;
+	border-radius: 50%;
+}
+
+#rangevalue {
+  color: green;
+}
+
+.l-slider {
+	display: inline-block;
+}
+
+.l-slider .ui-slider-handle {
+	width: 3em;	
+	height: 3em;
+	border-radius: 50%;
+	top: -1.1em;
+}
+
+.l-arrow-left {
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-right:10px solid blue; 
+	margin-right: 30px;
+}
+
 .setting-c .setting-o {
   font-size: 2em;
   display: inline-block;

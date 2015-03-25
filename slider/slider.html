@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+   	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+		
+		<script type="text/javascript" src="slider.js"></script>
+    <script type="text/javascript" src="../l.angular.js"></script>
+    <script type="text/javascript" src="../l.jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="../l.css">
+    
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=default&lang=html&lang=js"></script>
+    
+  </head>
+	<body ng-app="sliderEx" ng-controller="MainController">
+
+    <h2>Slider</h2>
+    
+    <h3>Numbers</h3>
+    <div class="bs-docs-example">
+      <div>How Many?</div>
+			<br/>
+      <input id="myslider" l-slider type="range" min="0" max="100" step="20"/>
+			<br/>
+			<output for="myslider">50</output>
+			<br/>
+      <pre class="prettyprint">&lt;input ng-repeat="num in numbers" l-radio name="numberRadio" text="num" type="radio"/&gt;</pre>
+    </div>
+  
+	</body>
+</html>

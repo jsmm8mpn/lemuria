@@ -4,12 +4,15 @@ l.controller('MainController', ['$scope', '$timeout', function($scope, $timeout)
 	$scope.devices = ['Desktop', 'Laptop', 'Tablet'];
 	$scope.food = [{
 		text: 'Apple',
-		img: '../icons/food/apple13.png'
+		img: '../icons/food/apple13.png',
+		value: 'a'
 	},{
 		text: 'Carrot',
-		img: '../icons/food/carrot3.png'
+		img: '../icons/food/carrot3.png',
+		value: 'c'
 	},{
 		text: 'Grapes',
-		img: '../icons/food/grapes1.png'
+		img: '../icons/food/grapes1.png',
+		value: 'g'
 	}];
 }]);
